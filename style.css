@@ -1,0 +1,685 @@
+/* -------------------- RESET -------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* -------------------- BODY -------------------- */
+body {
+  background: #e0f2f1; /* Verde suave */
+  color: #2e2e2e;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+/* -------------------- HISTORIA -------------------- */
+#sobre .history {
+  font-size: 1.1rem;
+  margin-bottom: 3rem;
+  color: #2e7d32;
+  line-height: 1.8;
+  text-align: justify;
+}
+
+/* -------------------- EQUIPO -------------------- */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.member {
+  background: linear-gradient(145deg, #ffffff, #c8e6c9);
+  padding: 1.5rem;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.member:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 35px rgba(0,0,0,0.25);
+}
+
+.member img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border: 3px solid #43a047;
+}
+
+.member h3 {
+  color: #1b5e20;
+  margin-bottom: 0.3rem;
+}
+
+.member p {
+  color: #2e7d32;
+  font-weight: 600;
+}
+
+/* -------------------- NAVBAR -------------------- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: linear-gradient(90deg, #43a047, #66bb6a);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-radius: 0 0 20px 20px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+.navbar .logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #fff;
+  letter-spacing: 2px;
+}
+.navbar .nav-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none; /* Quitamos puntos */
+}
+.navbar .nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  transition: 0.3s;
+}
+.navbar .nav-links a:hover {
+  color: #dcedc8;
+  transform: scale(1.1);
+}
+
+/* -------------------- SECCIONES -------------------- */
+.section {
+  padding: 4rem 2rem;
+}
+.section.glass {
+  background: rgba(255,255,255,0.5);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  margin: 2rem auto;
+  max-width: 1100px;
+  padding: 3rem 2rem;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+}
+
+/* -------------------- HERO -------------------- */
+.hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: url('img/6.jpg') center/cover no-repeat;
+}
+.hero .blur-bg {
+  position: absolute;
+  top:0; left:0;
+  width:100%; height:100%;
+  backdrop-filter: blur(10px);
+  background: rgba(76,175,80,0.5);
+}
+.hero-content {
+  position: relative;
+  color: #fff;
+  z-index: 2;
+}
+.hero-content h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+}
+.hero-content p {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+}
+.btn {
+  padding: 0.8rem 2rem;
+  border: none;
+  background: linear-gradient(45deg, #43a047, #66bb6a);
+  color: #fff;
+  border-radius: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.btn:hover {
+  background: linear-gradient(45deg, #2e7d32, #4caf50);
+  transform: scale(1.05);
+}
+
+/* -------------------- CONTADOR -------------------- */
+.stats {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 2rem;
+  gap: 2rem;
+}
+.stats div {
+  background: linear-gradient(45deg, #a5d6a7, #66bb6a);
+  padding: 2rem 1.5rem;
+  border-radius: 25px;
+  color: #fff;
+  text-align: center;
+  flex: 1;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+.stats h3.counter {
+  font-size: 2.5rem;
+  color: #1b5e20;
+  margin-bottom: 0.5rem;
+}
+.stats p {
+  font-weight: bold;
+  color: #fff;
+  font-size: 1rem;
+}
+
+/* -------------------- PRODUCT GRID -------------------- */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.card {
+  background: linear-gradient(145deg, #ffffff, #c8e6c9);
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 35px rgba(0,0,0,0.3);
+}
+.card h3 {
+  color: #1b5e20;
+  margin: 1rem 0 0.5rem;
+}
+.card p {
+  font-size: 0.95rem;
+  color: #2e7d32;
+  margin-bottom: 1rem;
+}
+.card button, .btn-popup {
+  background-color: #43a047;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  margin-top: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.card button:hover, .btn-popup:hover {
+  background-color: #2e7d32;
+}
+/* ===== STATS ===== */
+.stats { display:flex; justify-content:center; gap:3rem; margin-top:2rem; }
+.stats div { text-align:center; }
+.stats .counter { font-size:2rem; color:#00cc66; }
+.counter {
+  display: block;
+  font-size: 2.5rem;
+  color: #00cc66;
+}
+
+
+/* -------------------- FORMULARIO -------------------- */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background: #ffffffee;
+  padding: 2rem;
+  border-radius: 25px;
+  max-width: 500px;
+  margin: 2rem auto;
+  box-shadow: 0 10px 35px rgba(0,0,0,0.2);
+}
+form input, form select, form textarea {
+  padding: 0.8rem;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 1rem;
+}
+form input:focus, form select:focus, form textarea:focus {
+  border-color: #43a047;
+  box-shadow: 0 0 8px #43a047;
+}
+form button {
+  padding: 0.8rem;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(45deg, #43a047, #66bb6a);
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+form button:hover {
+  background: linear-gradient(45deg, #2e7d32, #4caf50);
+  transform: scale(1.05);
+}
+
+#chatbot {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: white;
+  color: green;
+  font-size: 2rem;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  z-index: 1000;
+  transition: transform 0.2s;
+}
+
+#chatbot:hover {
+  transform: scale(1.1);
+}
+
+#chatbot-box {
+  display: none; /* Oculto por defecto */
+  position: fixed;
+  bottom: 100px;
+  right: 30px;
+  width: 350px;
+  max-height: 400px;
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.3);
+  font-family: sans-serif;
+  z-index: 1000;
+  flex-direction: column;
+}
+
+#chatbot-header {
+  background: green;
+  color: white;
+  padding: 10px;
+  font-weight: bold;
+  text-align: center;
+}
+
+#chatbot-messages {
+  padding: 10px;
+  flex: 1;
+  overflow-y: auto;
+}
+
+#chatbot-messages div {
+  margin-bottom: 10px;
+}
+
+.user-msg {
+  text-align: right;
+  color: white;
+  background: green;
+  padding: 5px 10px;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+.bot-msg {
+  text-align: left;
+  color: white;
+  background: gray;
+  padding: 5px 10px;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+#chatbot-input {
+  display: flex;
+  border-top: 1px solid #ccc;
+}
+
+#chatbot-input input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  outline: none;
+}
+
+#chatbot-input button {
+  background: green;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+.product-carousel {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 15px;
+  margin-bottom: 1rem;
+}
+
+.product-carousel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+
+.product-carousel img.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+/* Flechas discretas */
+.product-carousel button.prev,
+.product-carousel button.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
+  border: none;
+  font-size: 1.5rem;
+  padding: 0.4rem 0.7rem;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 2;
+  transition: background 0.3s;
+}
+
+.product-carousel button.prev { left: 10px; }
+.product-carousel button.next { right: 10px; }
+
+.product-carousel button:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+
+/* -------------------- POPUP -------------------- */
+#product-popup {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-inner {
+  background: #e8f5e9;
+  padding: 2rem;
+  border-radius: 15px;
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+  animation: popupFade 0.3s ease-in-out;
+}
+
+.popup-inner h2 {
+  color: #2e7d32;
+  margin-bottom: 1rem;
+}
+
+.popup-inner p {
+  color: #1b5e20;
+  margin: 0.5rem 0;
+}
+
+.popup-inner .btn-buy {
+  margin-top: 1rem;
+  padding: 0.7rem 1.5rem;
+  background: #43a047;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.popup-inner .btn-buy:hover {
+  background: #2e7d32;
+}
+
+.popup-close {
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #1b5e20;
+  cursor: pointer;
+}
+
+@keyframes popupFade {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* -------------------- FOOTER -------------------- */
+footer {
+  text-align: center;
+  padding: 2rem;
+  background: linear-gradient(90deg, #43a047, #66bb6a);
+  color: #fff;
+  margin-top: 3rem;
+  font-weight: bold;
+  box-shadow: 0 -5px 25px rgba(0,0,0,0.2);
+}
+/* -------------------- RESPONSIVE DESIGN -------------------- */
+
+/* 📱 Para teléfonos (pantallas menores de 768px) */
+@media (max-width: 768px) {
+
+  /* Navbar */
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .navbar .nav-links {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.8rem;
+  }
+
+  .navbar .nav-links a {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+
+  /* Hero */
+  .hero {
+    height: auto;
+    padding: 4rem 1rem;
+  }
+
+  .hero-content h2 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  /* Stats */
+  .stats {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  /* Products */
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  /* Equipo */
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Chatbot */
+  #chatbot-box {
+    width: 90%;
+    right: 5%;
+  }
+
+  /* Footer */
+  footer {
+    font-size: 0.9rem;
+    padding: 1.5rem;
+  }
+}
+
+/* 💻 Para tablets (entre 769px y 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  .navbar {
+    padding: 1rem 1.5rem;
+  }
+
+  .hero-content h2 {
+    font-size: 2.4rem;
+  }
+
+  .hero-content p {
+    font-size: 1.1rem;
+  }
+
+  .stats {
+    gap: 1.5rem;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 🖥️ Para pantallas grandes (mayores de 1024px) */
+@media (min-width: 1025px) {
+  .hero-content h2 {
+    font-size: 3rem;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+/* -------------------- FOOTER -------------------- */
+/* -------------------- FOOTER -------------------- */
+footer {
+  background: linear-gradient(90deg, #2e7d32, #43a047);
+  color: #fff;
+  width: 100%;
+  margin-top: auto; /* Mantiene el footer al fondo si el contenido es corto */
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 2rem 1rem;
+  gap: 2rem;
+  text-align: center;
+}
+
+.footer-section h3, 
+.footer-section h4 {
+  margin-bottom: 1rem;
+  font-weight: bold;
+  color: #c8e6c9;
+}
+
+.footer-section p, 
+.footer-section a {
+  font-size: 0.95rem;
+  color: #f1f8e9;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section li {
+  margin: 0.5rem 0;
+}
+
+.footer-section a {
+  text-decoration: none;
+  color: #f1f8e9;
+  transition: 0.3s;
+}
+
+.footer-section a:hover {
+  color: #a5d6a7;
+  text-decoration: underline;
+}
+
+/* Línea inferior del footer */
+.footer-bottom {
+  background: #1b5e20;
+  text-align: center;
+  padding: 1rem 0.5rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+}
+
+/* Hacer que el footer siempre esté al fondo */
+html, body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+

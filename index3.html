@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EcoSolution | Comprar</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="js.js"></script>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <h1 class="logo">EcoSolution</h1>
+  <ul class="nav-links">
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="index2.html">Productos</a></li>
+    <li><a href="index3.html">Comprar</a></li>
+    <li><a href="sobre.html">Sobre Nosotros</a></li>
+    <li><a href="contacto.html">Contacto</a></li>
+  </ul>
+</nav>
+
+<!-- FORMULARIO DE COMPRA -->
+<section class="section glass section-center" id="comprar">
+  <h2>Formulario de Compra</h2>
+  <p>Llena todos los campos y asegura tus productos ecológicos favoritos.</p>
+  <form id="buyForm" class="form-style form-center">
+    <label>Nombre completo</label>
+    <input type="text" name="nombre" placeholder="Tu nombre completo" required>
+
+    <label>Correo electrónico</label>
+    <input type="email" name="email" placeholder="ejemplo@correo.com" required>
+
+    <label>Producto</label>
+    <select name="producto" required>
+      <option value="">Selecciona un producto</option>
+      <option value="Utensilios Biodegradables">Utensilios Biodegradables</option>
+      <option value="Esponjas Vegetales">Esponjas Vegetales</option>
+      <option value="Jabones Naturales">Jabones Naturales</option>
+      <option value="Vasos Reciclables">Vasos Reciclables</option>
+    </select>
+
+    <label>Cantidad</label>
+    <input type="number" name="cantidad" min="1" value="1" required>
+
+    <label>Dirección de entrega</label>
+    <input type="text" name="direccion" placeholder="Calle, número, ciudad" required>
+
+    <label>Teléfono</label>
+    <input type="tel" name="telefono" placeholder="+503 0000-0000" required>
+
+    <button type="submit" class="btn">Comprar Ahora</button>
+  </form>
+
+  <p id="successMsg" class="success-msg">¡Compra realizada con éxito! 🌱</p>
+</section>
+
+<!-- CHATBOT -->
+<div id="chatbot">💬</div>
+<div id="chatbot-box">
+  <div id="chatbot-header">Chat EcoSolution</div>
+  <div id="chatbot-messages"></div>
+  <div id="chatbot-input">
+    <input type="text" id="chatbot-input-text" placeholder="Escribe tu mensaje..." />
+    <button id="chatbot-send">Enviar</button>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-container">
+    <div class="footer-section">
+      <h3>EcoSolution</h3>
+      <p>Innovación Verde para un Futuro Sostenible 🌱</p>
+    </div>
+    <div class="footer-section">
+      <h4>Enlaces</h4>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="index2.html">Productos</a></li>
+        <li><a href="index3.html">Comprar</a></li>
+        <li><a href="sobre.html">Sobre Nosotros</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h4>Contáctanos</h4>
+      <p>📞 +503 7000 0000</p>
+      <p>✉️ contacto@ecosolution.com</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 EcoSolution | Innovación Verde 🌍</p>
+  </div>
+</footer>
+
+</body>
+</html>
